@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { FaPen, FaTimes } from "react-icons/fa";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Cargando } from "./componentes/Cargando";
+import { Formulario } from "./componentes/Formulario";
+import { Error } from "./componentes/Error";
+import { Listado } from "./componentes/Listado";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="contenedor">
+      <Row as="header">
+        <Col as="h1">Tipos de gatos</Col>
+      </Row>
+      {/* <Error /> */}
+      <Row as="main">
+        {/* <Formulario /> */}
+        <Listado />
+      </Row>
+      {/* <Cargando /> */}
+    </Container>
   );
 }
 
