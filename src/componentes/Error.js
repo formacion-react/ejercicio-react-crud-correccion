@@ -1,3 +1,7 @@
+import { useContext } from "react";
+import { APIContext } from "../contexts/APIContext";
+
 export const Error = () => {
-  return <p className="error">Algo ha fallado</p>;
+  const { error } = useContext(APIContext);
+  return <>{error && <p className="error">Algo ha fallado</p>}</>;
 };
